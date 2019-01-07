@@ -7,11 +7,11 @@ header {
   width: 100%;
   background: $black;
   color: $white;
-  height: 90px;
+  height: 10%;
 
   .logo {
-    position: absolute;
-    margin-left: 3%;
+    position: relative;
+    margin-left: 1%;
     top: 3%;
     width: 5%;
   }
@@ -38,9 +38,10 @@ header {
       }
 
       a{
-        font-size: 19px;
+        font-size: 100%;
         line-height: normal;
-        color: $white;
+        color: ivory;
+        //color: $white;
       }
 
     }

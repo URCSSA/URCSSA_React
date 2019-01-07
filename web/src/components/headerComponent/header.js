@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 
 
-import logo from '../../Assets/images/logo_black.jpeg';
+import logo from '../../Assets/images/logo/black.jpeg';
 import Activities from "../pages/activities";
 import Information from "../pages/information";
 
