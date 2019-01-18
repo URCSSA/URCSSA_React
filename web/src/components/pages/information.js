@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
 
 class Information extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {display: "information"};
+        this.displayInformation = this.displayInformation.bind(this);
+        this.displayResources = this.displayResources.bind(this);
+        this.displayFaq = this.displayFaq.bind(this);
+    }
+
+    displayInformation() {
+        this.setState({display: "information"});
+    }
+
+    displayResources() {
+        this.setState({display: "resources"});
+    }
+
+    displayFaq() {
+        this.setState({display: "faq"});
+    }
+
     render() {
-        return (
-            <div className="container-fluid">
-
-                <nav className="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-                    <ul className="nav sidebar-nav">
-                        <li>
-                            <a href="#">Information</a>
-                        </li>
-                        <li>
-                            <a href="#">Resources</a>
-                        </li>
-                        <li>
-                            <a href="#">FAQ</a>
-                        </li>
-                    </ul>
-                </nav>
-
+        var content;
+        if(this.state.display === "information") {
+            content =
+            <div className="information">
                 <h1>
                     Information
                  </h1>
@@ -26,7 +33,10 @@ class Information extends Component {
                 <p>
                     Welcome to University of Richmond CSSA! We are excited to share with you information about our team, activities, and many useful resources and information for incoming and returning students alike. We hope you find our site helpful in assisting your journey at UR.
                 </p>
-
+            </div>
+        } else if(this.state.display === "resources") {
+            content =
+            <div className="resources">
                 <h1>
                     Resources
                 </h1>
@@ -63,9 +73,10 @@ class Information extends Component {
                     - We have prepared a guide to new students on arriving at, adjusting to, and living at University
                     of Richmond. <small>[Chinese only]</small>
                 </p>
-
-
-
+            </div>
+        } else if(this.state.display === "faq"){
+            content =
+            <div className="faq">
                 <h1>
                     Frequently Asked Questions
                 </h1>
@@ -78,7 +89,7 @@ class Information extends Component {
                 </div>
 
                 <div class="faqTitle">
-                    <h2>Joining and Membership</h2>
+                    <a name="Joining and Membership"></a><h2>Joining and Membership</h2>
                 </div>
                 <div class="faqContainer">
                     <div class="faqQuestion">
@@ -150,13 +161,11 @@ class Information extends Component {
                     <div class="faqQuestion">
                         <h3>
                             How does the mean plan work?
-
                         </h3>
                     </div>
                     <div class="faqAnswer">
                         <p>
                             Meal plan participation is required as part of on campus housing agreement. For most residence halls, students can choose Spider Unlimited, which includes unlimited meals at Heilman Dining Center and $760 Dining dollars per semester. This meal plan will include 2 guest meal and the dining dollors only roll over within the academic year. Student can also upgrade to Spider Plus Unlimited, which have $1060 dining dollar and unlimited meal.
-
                         </p>
                     </div>
                 </div>
@@ -188,7 +197,30 @@ class Information extends Component {
                     </div>
                 </div>
             </div>
-    );
+
+        }
+        return (
+            <div className="container-fluid">
+
+                {/* Sidebar */}
+                <nav className="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                    <ul className="nav sidebar-nav">
+                        <li>
+                            <button onClick={this.displayInformation}>Information</button>
+                        </li>
+                        <li>
+                            <button onClick={this.displayResources}>Resources</button>
+                        </li>
+                        <li>
+                            <button onClick={this.displayFaq}>FAQ</button>
+                        </li>
+                    </ul>
+                </nav>
+
+                {content}
+
+            </div>
+        );
     }
 }
 
