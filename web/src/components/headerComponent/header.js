@@ -5,8 +5,6 @@ import {
 
 
 import logo from '../../Assets/images/logo/black.jpeg';
-import Activities from "../pages/activities";
-import Information from "../pages/information";
 
 class Header extends Component {
     render() {

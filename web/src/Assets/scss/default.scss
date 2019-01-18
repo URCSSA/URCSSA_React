@@ -49,3 +49,67 @@ header {
 
 
 }
+
+homepage {
+  .majorBanner {
+    .bannerImg {
+      position: absolute;
+      top: 0%;
+    }
+
+    .bannerContent {
+
+      color: $white;
+
+      .large {
+        position: absolute;
+        @include center(100%);
+        font-size: large;
+        //font-family: "Avenir"; not working
+      }
+
+      .small {
+        @include center(100%);
+        top: 20%;
+        font-size: medium;
+        //font-family: "Futura LT Light"; not working
+      }
+    }
+
+    .title {
+      font-size: medium;
+    }
+
+
+
+  }
+
+  .galleryImg {
+    position: absolute;
+    width: 0%;
+    height: 20%;
+    margin-bottom: 10px;
+  }
+
+
+  //.h1 {
+  //  display: block;
+  //  min-height: 540px;
+  //  font-family: "Avenir";
+  //  font-size: 40px;
+  //  line-height:120%;
+  //  color: white;
+  //  position: relative;
+  //  top: 10%;
+  //  /*margin-left: 18%;*/
+  //  text-align: center;
+  //  min-width: 100%;
+  //  /*width: 800px;*/
+  //    .smaller {
+  //      font-family: "Futura LT Light";
+  //      font-size: 28px;
+  //    }
+  //}
+
+
+}
