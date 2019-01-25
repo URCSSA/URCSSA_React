@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {
-    Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 import logo from '../../Assets/images/logo/black.jpeg';
@@ -25,7 +23,13 @@ class Header extends Component {
                             <Link to="/About">About</Link>
                         </li>
                         <li>
-                            <Link to="/Information">Information</Link>
+                            <Link to="/information">Information</Link>
+                        </li>
+                        <li>
+                            <Link to="/information/resources">Resources</Link>
+                        </li>
+                        <li>
+                            <Link to="/information/faq">FAQ</Link>
                         </li>
                         <li>
                             <Link to="/Activities">Activities</Link>
