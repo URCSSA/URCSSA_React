@@ -8,7 +8,6 @@ var uglify = require('gulp-uglify')
 var rename = require('gulp-rename');
 var changed = require('gulp-changed');
 
-
 //- SCSS/CSS
 var SCSS_SRC = './src/Assets/scss/**/*.scss'; //input path
 var SCSS_DEST = './src/Assets/css'; //output path
@@ -26,9 +25,9 @@ gulp.task('compile_scss', function(){
 });
 
 //detect changes in SCSS
-gulp.task('watch_scss', gulp.series('compile_scss', function(){
-   gulp.watch(SCSS_SRC, ['compile_scss']);
-}));
+gulp.task('watch_scss', function() {
+    return gulp.watch(SCSS_SRC, gulp.series('compile_scss'));
+});
 
 //Run tasks
 gulp.task('default', gulp.series('watch_scss'));
