@@ -33,13 +33,8 @@ class App extends Component {
 
                 <Route exact path = '/' component={Homepage} />
                 <Route exact path = '/About' component={About} />
-<<<<<<< HEAD
-                <Route path = '/information' component={Information} />
+                <Route path = '/Information' component={Information} />
                 <Route exact path = '/Activities' component={Activities} />
-=======
-                <Route exact path = '/Information' component={Information} />
-                <Route /*exact*/ path = '/Activities' component={Activities} />
->>>>>>> e5b6abbc68bc1861fae95b1473dcd9bd90280a50
                 <Route exact path = '/Contact' component={Contact} />
 
             <Footer />
