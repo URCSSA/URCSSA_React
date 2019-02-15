@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "gulp-changed": "^3.2.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
+=======
+>>>>>>> e5b6abbc68bc1861fae95b1473dcd9bd90280a50
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
@@ -32,6 +35,14 @@
   ],
   "devDependencies": {
     "gulp": "^4.0.0",
+<<<<<<< HEAD
+=======
+    "gulp-changed": "^3.2.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+>>>>>>> e5b6abbc68bc1861fae95b1473dcd9bd90280a50
     "terser-webpack-plugin": "^1.2.1"
   }
 }

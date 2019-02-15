@@ -16,7 +16,7 @@ var SCSS_DEST = './src/Assets/css'; //output path
 
 gulp.task('compile_scss', function(){
 
-    gulp.src(SCSS_SRC)
+    return gulp.src(SCSS_SRC)
         .pipe(sass().on('error', sass.logError))
         .pipe(minifyCSS())
         .pipe(rename({ suffix: '.min' }))
@@ -25,9 +25,20 @@ gulp.task('compile_scss', function(){
 });
 
 //detect changes in SCSS
+<<<<<<< HEAD
 gulp.task('watch_scss', function() {
     return gulp.watch(SCSS_SRC, gulp.series('compile_scss'));
 });
+=======
+gulp.task('watch_scss', function(){
+	return gulp.watch(SCSS_SRC, gulp.series('compile_scss'));
+});
+/*
+gulp.task('watch_scss', gulp.series('compile_scss', function(){
+   return gulp.watch(SCSS_SRC, ['compile_scss']);
+}));
+*/
+>>>>>>> e5b6abbc68bc1861fae95b1473dcd9bd90280a50
 
 //Run tasks
 gulp.task('default', gulp.series('watch_scss'));

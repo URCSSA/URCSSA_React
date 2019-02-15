@@ -1,6 +1,5 @@
 @import "_config.scss";
 
-
 header {
   position: relative;
   display: block;
@@ -48,6 +47,7 @@ header {
   }
 }
 
+<<<<<<< HEAD
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 160px; /* Set the width of the sidebar */
@@ -58,4 +58,63 @@ header {
   background-color: #111; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
+=======
+actColumn {
+  height: 100%;
+  .zui-table {
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    font: normal 20px Arial, sans-serif;
+    color: $lightGrey;
+  }
+  .zui-table thead th {
+    background-color: $white;
+    border-bottom: solid 1px $lightGrey;
+    color: $grey;
+    padding-left: 40px;
+    padding-top: 25px;
+    text-align: bottom;
+    text-shadow: 1px 1px 1px #fff;
+    //white-space: nowrap;
+  }
+}
+
+container-fluid {
+  .actbanner {
+    position: absolute;
+    width: 110%;
+    margin: 0;
+  }
+  .actColumn {
+    width: 30%;
+    margin-right: 75%;
+    font: normal 20px Arial, sans-serif;
+    color: $grey;
+
+    nav {
+      position: absolute;
+      top: 50%; right: 15px;
+      @include translateY(-50%);
+
+      ul li {
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 25px;
+
+        &.last {
+          margin: 0;
+        }
+
+        a{
+          font-size: 100%;
+          line-height: normal;
+          color: ivory;
+          //color: $white;
+        }
+
+      }
+    }
+  }
+>>>>>>> e5b6abbc68bc1861fae95b1473dcd9bd90280a50
 }

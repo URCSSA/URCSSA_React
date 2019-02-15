@@ -7,7 +7,7 @@ class Footer extends Component {
                 URCSSA 2016-2019
 
             </footer>
-    );
+        );
     }
 }
 
