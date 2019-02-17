@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom';
 
-import actbanner from '../../Assets/images/pic/activitiesBanner16.jpg';
+import actbanner from '../../Assets/images/devResources_OriginalWeb/activitiesBanner16.jpg';
 
 function UpcomingActivities() {
   return (
