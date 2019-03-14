@@ -11,7 +11,7 @@ import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 
 //components
 import HeaderLocal from './components/headerComponent/header';
-import Footer from './components/footerComponent/footer';
+import FooterLocal from './components/footerComponent/footer';
 import Homepage from './components/pages/homePage';
 import About from './components/pages/about';
 import Information from './components/pages/information';
@@ -39,7 +39,7 @@ class App extends Component {
                 <Route exact path = '/Activities' component={Activities} />
                 <Route exact path = '/Contact' component={Contact} />
 
-            <Footer/>
+            <FooterLocal/>
 
       </div>
 
