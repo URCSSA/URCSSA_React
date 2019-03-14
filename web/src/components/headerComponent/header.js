@@ -1,46 +1,40 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 
 
 import logo from '../../Assets/images/logo/black.jpeg';
 
-class Header extends Component {
+class HeaderLocal extends Component {
     render() {
         return (
-            <header>
-                <div className="logo">
-                    <img src={logo} class="img-fluid" alt="Responsive image"/>
-                </div>
+            <headerLocal>
 
-                <nav>
-                    <ul>
-                        <li className="first">
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/About">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/information">Information</Link>
-                        </li>
-                        <li>
-                            <Link to="/information/resources">Resources</Link>
-                        </li>
-                        <li>
-                            <Link to="/information/faq">FAQ</Link>
-                        </li>
-                        <li>
-                            <Link to="/Activities">Activities</Link>
-                        </li>
-                        <li className="last">
-                            <Link to="/Contact">Contact Us</Link>
-                        </li>
-                    </ul>
-                </nav>
+            <Layout>
+                <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">Home</Link>} scroll>
+                    <Navigation>
+                        <Link to="/About">About</Link>
+                        <Link to="/Information">Information</Link>
+                        <Link to="/Activities">Activities</Link>
+                        <Link to="/Contact">Contact Us</Link>
+                    </Navigation>
+        <img src={logo} alt="Responsive image" className="logo"/>
 
-            </header>
+            </Header>
+                <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">Home</Link>}>
+                    <Navigation>
+                        <Link to="/About">About</Link>
+                        <Link to="/Information">Information</Link>
+                        <Link to="/Activities">Activities</Link>
+                        <Link to="/Contact">Contact Us</Link>
+                    </Navigation>
+                </Drawer>
+
+            </Layout>
+
+            </headerLocal>
     );
     }
 }
 
-export default Header;
+export default HeaderLocal;

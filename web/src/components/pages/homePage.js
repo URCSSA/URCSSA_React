@@ -8,6 +8,8 @@ import weWantYou from '../../Assets/images/devResources_OriginalWeb/indexWeWantY
 import voiceofva from '../../Assets/images/devResources_OriginalWeb/voiceofva.jpg';
 import temp from '../../Assets/images/devResources_OriginalWeb/indexTemp.jpg';
 import {Link} from "react-router-dom";
+import { Layout, Header, Navigation, Drawer, Content, Grid, Cell } from 'react-mdl';
+
 
 
 class Homepage extends Component {
@@ -27,7 +29,21 @@ class Homepage extends Component {
 
                 // </div>
 
-                <div class="container-fluid text-center">
+        <Grid className="demo-grid-ruler">
+            <Cell col={4}>
+                <Link to="/About"><img className="galleryImg" src={ourTeam16} class="img-circle img-responsive" alt="team"/>
+                    </Link>
+            </Cell>
+            <Cell col={4}>
+                <Link to="/"><img className="galleryImg" src={site16} class="img-circle img-responsive"  alt="site"/></Link>
+            </Cell>
+            <Cell col={4}>
+                <Link to="Information"><img className="galleryImg" src={handBook} class="img-circle img-responsive" alt="handbook"/></Link>
+            </Cell>
+            </Grid>
+
+
+            <div class="container-fluid text-center">
 
                     <div class="row text-center">
                         <div class="col-sm-4">

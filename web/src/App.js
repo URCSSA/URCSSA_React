@@ -5,10 +5,12 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+
 
 
 //components
-import Header from './components/headerComponent/header';
+import HeaderLocal from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import Homepage from './components/pages/homePage';
 import About from './components/pages/about';
@@ -29,7 +31,7 @@ class App extends Component {
       <Router>
         <div className="App">
 
-            <Header />
+            <HeaderLocal/>
 
                 <Route exact path = '/' component={Homepage} />
                 <Route exact path = '/About' component={About} />
@@ -37,7 +39,7 @@ class App extends Component {
                 <Route exact path = '/Activities' component={Activities} />
                 <Route exact path = '/Contact' component={Contact} />
 
-            <Footer />
+            <Footer/>
 
       </div>
 
