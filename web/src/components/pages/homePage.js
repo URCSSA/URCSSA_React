@@ -16,15 +16,22 @@ class Homepage extends Component {
     render() {
         return (
             <homepage>
-                <div className="majorBanner">
-                    <img className="bannerImg" src={homeBanner} class="img-fluid" alt="banner"/>
-                    <div className="bannerContent">
-                        <div className="large">
-                            CHINESE STUDENTS AND SCHOLARS ASSOCIATION
-                        </div>
-                        <div className="small">University of Richmond </div>
-                    </div>
-                </div>
+            <div style={{width: '100%', margin: 'auto'}}>
+            <Grid className="landing-grid">
+            <Cell col={12}>
+            </Cell>
+            <div className="majorBanner">
+            <img className="bannerImg" src={homeBanner} class="img-fluid" alt="banner"/>
+            <div className="bannerContent">
+            <div className="large">
+            CHINESE STUDENTS AND SCHOLARS ASSOCIATION
+        </div>
+        <div className="small">University of Richmond </div>
+        </div>
+        </div>
+            </Grid>
+            </div>
+
                 // <div className="container-fluid">
 
                 // </div>
@@ -43,26 +50,6 @@ class Homepage extends Component {
             </Grid>
 
 
-            <div class="container-fluid text-center">
-
-                    <div class="row text-center">
-                        <div class="col-sm-4">
-                            <div class="thumbnail">
-                                <Link to="/About"><img className="galleryImg" src={ourTeam16} class="img-circle img-responsive" alt="team"/></Link>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="thumbnail">
-                                <Link to="/"><img className="galleryImg" src={site16} class="img-circle img-responsive"  alt="site"/></Link>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="thumbnail">
-                                <Link to="Information"><img className="galleryImg" src={handBook} class="img-circle img-responsive" alt="handbook"/></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </homepage>
     );
     }

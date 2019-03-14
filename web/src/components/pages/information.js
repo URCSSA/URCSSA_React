@@ -7,6 +7,8 @@ import {
 
 import { Tabs, Tab, Grid, Cell, Navigation} from 'react-mdl';
 
+
+
 class Information extends Component {
     constructor(props) {
         super(props);
