@@ -107,30 +107,48 @@ container-fluid {
   }
 }
 homepage {
+  .landing-grid{
+    background: #292E49; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BBD2C5, #536976, #292E49); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BBD2C5, #536976, #292E49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
   .majorBanner {
     .bannerImg {
-      position: absolute;
+      position: relative;
       top: 0%;
       width: 100%;
-      hight: 30%;
+      height: 30%;
     }
-
+    .img-fluid{
+      width: 100%;
+      height: 50%;
+    }
     .bannerContent {
-
+      width: 100%;
+      height: 100%;
       color: $white;
 
       .large {
-        position: absolute;
+        position: relative;
         @include center(100%);
-        font-size: large;
+        font-size: 88px;
+        margin: auto;
         //font-family: "Avenir"; not working
+      }
+      .large h1{
+        width: 50%;
+        margin: auto;
       }
 
       .small {
         @include center(100%);
         top: 20%;
-        font-size: medium;
+        font-size: 44px;
         //font-family: "Futura LT Light"; not working
+      }
+      .small h1{
+        width: 50%;
+        margin: auto;
       }
     }
 
@@ -144,10 +162,18 @@ homepage {
 
   .galleryImg {
     position: relative;
-    width: 0%;
+    width: 10%;
     height: 10%;
     padding: 0;
-    margin-bottom: 10px;
+    .img-circle img-responsive{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .demo-grid-ruler{
+    width: 10%;
+    height: 10%;
   }
 
 
